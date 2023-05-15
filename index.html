@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,18 +10,74 @@
     <meta name="description" content="" />
     <base target="_self" />
     <title>BMR 109403019</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 6px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <form action="get" id="myForm">
-      性別 <input type="radio" name="sex" id="s1" value="male" />男
-      <input type="radio" name="sex" id="s2" value="female" />女<br />
-      身高(cm) <input type="text" name="height" id="height" /><br />
-      體重(kg) <input type="text" name="weight" id="weight" /><br />
-      年齡 <input type="text" name="age" id="age" /><br />
+    <div class="container">
+      <form action="get" id="myForm">
+        性別 <input type="radio" name="sex" id="s1" value="male" />男
+        <input type="radio" name="sex" id="s2" value="female" />女<br />
+        身高(cm) <input type="text" name="height" id="height" /><br />
+        體重(kg) <input type="text" name="weight" id="weight" /><br />
+        年齡 <input type="text" name="age" id="age" /><br />
 
-      <input type="submit" value="Submit" id="btn" />
-    </form>
+        <input type="submit" value="Submit" id="btn" />
+      </form>
+    </div>
   </body>
 </html>
 
