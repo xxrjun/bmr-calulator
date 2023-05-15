@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="rjun" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="rating" content="General" />
+    <meta name="description" content="" />
+    <base target="_self" />
+    <title>BMR 109403019</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form action="get" id="myForm">
+      性別 <input type="radio" name="sex" id="s1" value="male" />男
+      <input type="radio" name="sex" id="s2" value="female" />女<br />
+      身高(cm) <input type="text" name="height" id="height" /><br />
+      體重(kg) <input type="text" name="weight" id="weight" /><br />
+      年齡 <input type="text" name="age" id="age" /><br />
+
+      <input type="submit" value="Submit" id="btn" />
+    </form>
+  </body>
+</html>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const height = document.getElementById("height").value;
+    const weight = document.getElementById("weight").value;
+    const male = document.getElementById("s1");
+    const female = document.getElementById("s2");
+    const sex = male ? 1 : 0;
+    const age = document.getElementById("age").value;
+
+    // 基礎代謝率(BMR) = 9.99 × 體重 + 6.25 × 身高 - 4.92 × 年齡 +(166 × 性別 (男 1、女 0) - 161)
+    let bmr = 9.99 * weight + 6.25 * height - 4.92 * age + (166 * sex - 161);
+
+    alert("你的BMR為" + bmr.toFixed(2));
+  });
+</script>
